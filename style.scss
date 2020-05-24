@@ -153,6 +153,7 @@ h1, h2, h3, h4, h5, h6 {
     @media (max-width:$md2+px){
       margin: 0px 1px 0px 0px;
     }
+
     &:last-child{
       margin: 0px 0px 0px 0px;
     }
@@ -225,6 +226,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .skills__title {
   margin: 0px 0px 57px 0px;
+
+  @media (max-width:$md2+px){
+    margin: 0px 0px 18px 0px;
+  }
 }
 .title {
   text-align: center;
@@ -234,9 +239,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .skills-columns {
   display: flex;
-  justify-content: space-between;
+  margin: 0px -15px;
 }
 .skills-columns__item {
+  flex: 0 1 25%;
+  padding: 0px 15px;
   text-align: center;
   & p {
     color: #000000;
@@ -257,18 +264,6 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 
-  &:nth-child(1){
-    flex: 0 1 254px;
-  }
-  &:nth-child(2){
-    flex: 0 1 153px;
-  }
-  &:nth-child(3){
-    flex: 0 1 186px;
-  }
-  &:nth-child(4){
-    flex: 0 1 198px;
-  }
 }
 
 
