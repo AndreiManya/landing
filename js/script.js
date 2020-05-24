@@ -14,6 +14,12 @@ window.addEventListener('DOMContentLoaded', function() {
   //       }
   //     }
   //   }
-  
+  let burger = document.querySelector('.nav__burger'), 
+  nav  = document.querySelector('.top-nav');
+  burger.addEventListener('click', (e)=>{
+    burger.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
+
 
   });
