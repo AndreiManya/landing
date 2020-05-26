@@ -14,26 +14,12 @@ window.addEventListener('DOMContentLoaded', function() {
   //       }
   //     }
   //   }
-
-
-  let form = document.querySelector('form');
-
-  // form.addEventListener('sumbit', (e)=>{
-  //   let user = {
-  //     name: 'John',
-  //     surname: 'Smith'
-  //   };
-    
-  //   return fetch('/data.txt', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json;charset=utf-8'
-  //     },
-  //     body: JSON.stringify(document.querySelector('form'))
-  //   });
-    
-  
-  // });
+  let burger = document.querySelector('.nav__burger'), 
+  nav  = document.querySelector('.top-nav');
+  burger.addEventListener('click', (e)=>{
+    burger.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
 
 
   let isScrolling = false;
@@ -60,8 +46,6 @@ function throttleScroll(e) {
     });
     isScrolling = true;
 }
- 
-
-
 }
-});
+
+  });
