@@ -402,6 +402,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.skills-container {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
 .skills__title {
   margin: 0px 0px 57px 0px;
 }
@@ -516,6 +524,16 @@ h1, h2, h3, h4, h5, h6 {
   .lessons {
     height: 1350px;
   }
+}
+
+.lessons-block {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
 }
 
 .lessons-block__title {
@@ -665,6 +683,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form {
+  opacity: 0;
+  -webkit-transform: translate(-500px, 0px);
+          transform: translate(-500px, 0px);
+  -webkit-transition: all 1s;
+  transition: all 1s;
   position: absolute;
   right: 12.90878%;
   height: 510px;
@@ -807,4 +830,12 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px 0px 0px 0px;
+}
+
+.active {
+  opacity: 1;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
 }
