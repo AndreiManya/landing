@@ -14,12 +14,54 @@ window.addEventListener('DOMContentLoaded', function() {
   //       }
   //     }
   //   }
-  let burger = document.querySelector('.nav__burger'), 
-  nav  = document.querySelector('.top-nav');
-  burger.addEventListener('click', (e)=>{
-    burger.classList.toggle('active');
-    nav.classList.toggle('active');
-  });
 
 
-  });
+  let form = document.querySelector('form');
+
+  // form.addEventListener('sumbit', (e)=>{
+  //   let user = {
+  //     name: 'John',
+  //     surname: 'Smith'
+  //   };
+    
+  //   return fetch('/data.txt', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json;charset=utf-8'
+  //     },
+  //     body: JSON.stringify(document.querySelector('form'))
+  //   });
+    
+  
+  // });
+
+
+  let isScrolling = false;
+ 
+window.addEventListener("scroll", throttleScroll, false);
+ 
+function throttleScroll(e) {
+    if (isScrolling == false ) {
+        window.requestAnimationFrame(()=> {
+         function k (e) {
+          const screenPosition = window.innerHeight / 1.35;
+          const arr = [document.querySelector('.skills-container'), document.querySelector('.lessons-block'), document.querySelector('.form')];
+
+          arr.forEach((item)=>{
+            if(item.getBoundingClientRect().top < screenPosition){
+              item.classList.add('active');
+            }
+          })
+          
+         }
+         k();
+          isScrolling = false;
+        
+    });
+    isScrolling = true;
+}
+ 
+
+
+}
+});
