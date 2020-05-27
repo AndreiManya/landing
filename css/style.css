@@ -263,8 +263,16 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px 0px 0px 0px;
 }
 
-.top-nav li a {
+.top-nav li:last-child:hover {
+  cursor: default;
   color: #ffffff;
+}
+
+.top-nav li:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  color: black;
 }
 
 .top-bottom {

@@ -14,15 +14,22 @@ window.addEventListener('DOMContentLoaded', function() {
   //       }
   //     }
   //   }
+
+  //------------------BURGER-----------------
   let burger = document.querySelector('.nav__burger'), 
   nav  = document.querySelector('.top-nav');
   burger.addEventListener('click', (e)=>{
     burger.classList.toggle('active');
     nav.classList.toggle('active');
   });
+  //-------------------------
 
 
-  let isScrolling = false;
+
+//----------------Animation----------
+const arr = [document.querySelector('.skills-container'), document.querySelector('.lessons-block'), document.querySelector('.form')];
+
+let isScrolling = false;
  
 window.addEventListener("scroll", throttleScroll, false);
  
@@ -31,21 +38,38 @@ function throttleScroll(e) {
         window.requestAnimationFrame(()=> {
          function k (e) {
           const screenPosition = window.innerHeight / 1.35;
-          const arr = [document.querySelector('.skills-container'), document.querySelector('.lessons-block'), document.querySelector('.form')];
 
           arr.forEach((item)=>{
             if(item.getBoundingClientRect().top < screenPosition){
               item.classList.add('active');
             }
-          })
-          
+          });  
          }
          k();
-          isScrolling = false;
-        
+          isScrolling = false;        
     });
     isScrolling = true;
 }
 }
+//-----------------------
 
+//-------ScrollByclick--------------
+let topnav = document.querySelector('.top-nav'),
+    li = document.querySelectorAll('li');
+
+topnav.addEventListener('click', function(event) {
+
+  arr.forEach((item)=>{
+    if(event.target && event.target.classList.contains('btn')){
+      for(let i=0; i<arr.length; i++){
+        if (event.target == li[i]){
+          arr[i].scrollIntoView({behavior:"smooth", block: "center"});
+        }
+      }
+    }
+  })
   });
+
+
+
+});
