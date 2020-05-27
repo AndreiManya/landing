@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .top {
   height: 697px;
-  background: url(../img/bg.png) 50% 50% no-repeat;
+  background: url(../img/bg.jpg) 50% 50% no-repeat;
   color: #ffffff;
   
   @media (max-width:$md2+px){
@@ -109,8 +109,8 @@ h1, h2, h3, h4, h5, h6 {
   @media (max-width:$md3+px){
     max-width: 767px;
     width: 100%;
-    background-size: 100% 100%; 
   }
+
 
 }
 // .container {
@@ -510,7 +510,7 @@ h1, h2, h3, h4, h5, h6 {
 //MAP--------------
   .map {
     height: 510px;
-    background: url(../img/about/map1.png) 50% 50% no-repeat;
+    background: url(../img/about/map1.jpg) 50% 50% no-repeat;
     position: relative;
 
     @media (max-width:$md1+px){
