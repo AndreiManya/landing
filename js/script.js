@@ -22,6 +22,9 @@ window.addEventListener('DOMContentLoaded', function() {
     burger.classList.toggle('active');
     nav.classList.toggle('active');
   });
+
+  // let link = 
+
   //-------------------------
 
 
@@ -42,7 +45,7 @@ function throttleScroll(e) {
           arr.forEach((item)=>{
             if(item.getBoundingClientRect().top < screenPosition){
               item.classList.add('active');
-            }
+            } 
           });  
          }
          k();
@@ -58,18 +61,34 @@ let topnav = document.querySelector('.top-nav'),
     li = document.querySelectorAll('li');
 
 topnav.addEventListener('click', function(event) {
-
   arr.forEach((item)=>{
     if(event.target && event.target.classList.contains('btn')){
       for(let i=0; i<arr.length; i++){
         if (event.target == li[i]){
           arr[i].scrollIntoView({behavior:"smooth", block: "center"});
+          burger.classList.toggle('active');
+          nav.classList.toggle('active');      
         }
       }
     }
-  })
   });
+ 
+});
 
+
+
+//----FORM-----
+
+let myForm = document.getElementsByClassName('form-block')[0];
+  myForm.addEventListener('submit', (e)=>{
+  e.preventDefault();
+  // const formData = new FormData();
+
+  // fetch("../server.php", {
+  //   method:'POST',
+  //   body: formData
+  // }).then((response)=>{response.text()}).then((text)=>{console.log(text)});
+});
 
 
 });
