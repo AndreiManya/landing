@@ -1,2 +1,2 @@
 # landing
-# http://andreimanya.github.io/
+# https://andreimanya.github.io/landing/
