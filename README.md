@@ -1,2 +1,1 @@
-# landing
-# https://andreimanya.github.io/
+# Simple landing using html & css
